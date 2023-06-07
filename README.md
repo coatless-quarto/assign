@@ -1,4 +1,4 @@
-**This is a work in progress extension. It does not work right now!**
+**This is a work in progress extension. We're working on a few output related details!**
 
 # Assign Extension For Quarto
 
