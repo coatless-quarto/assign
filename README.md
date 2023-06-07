@@ -4,7 +4,7 @@
 
 Quarto extension for designing homework assignments and solutions in a single document.
 
-This is the modernization of the [`assignr`](https://github.com/r-assist/assignr) _R_ package.s
+This is the modernization of the [`assignr`](https://github.com/r-assist/assignr) _R_ package.
 
 ## Installing
 
