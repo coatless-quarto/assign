@@ -1,9 +1,11 @@
 
 -- Reformat all Div content
 function Div(div)
-  if not div.classes:includes("sol") or not div.classes:includes("rubric") or not div.classes:includes("direction")  then
+
+  if not (div.classes:includes("sol") or div.classes:includes("rubric") or div.classes:includes("direction") ) then
     return nil
   end
+
   local behavior = "content-visible" -- or "content-hidden", as necessary
 
   local value_condition = {}
@@ -26,3 +28,5 @@ function Div(div)
     condition = condition
   })
 end
+
+
