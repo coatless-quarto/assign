@@ -5,6 +5,7 @@ filters:
 - assign
 ---
 
+This content will always appear across every single document.
 
 ::: {.content-visible when-profile="direction"}
 
