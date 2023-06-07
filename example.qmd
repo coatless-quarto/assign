@@ -1,0 +1,49 @@
+---
+title: "Conditional custom AST demo classes"
+format: html
+---
+
+
+::: {.content-visible when-profile="direction"}
+
+Built-in conditional example for **direction**
+
+:::
+
+
+::: {.direction}
+
+Custom conditional class for **direction**
+
+:::
+
+----
+
+::: {.content-visible when-profile="sol"}
+
+Built-in conditional example for **solution**
+
+:::
+
+
+::: {.sol}
+
+Custom conditional class for **solution**
+
+:::
+
+----
+
+::: {.content-visible when-profile="rubric"}
+
+Built-in conditional example for **rubric**
+
+:::
+
+
+::: {.rubric}
+
+Custom conditional class for **rubric**
+
+:::
+

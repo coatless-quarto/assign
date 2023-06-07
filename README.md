@@ -1,3 +1,5 @@
+**This is a work in progress extension. It does not work right now!**
+
 # Assign Extension For Quarto
 
 Quarto extension for designing homework assignments and solutions in a single document.
@@ -26,7 +28,7 @@ The extension takes a single document and creates three different outputs:
 To achieve this feat, the extension uses custom class names and hides content depending on the profile being displayed.
 
 - `direction`: shown in the assignment, but not the solution or rubric documents.
-- `solution`: shown in the solution and rubric documents.
+- `sol`: shown in the solution and rubric documents.
 - `rubric`: shown only in the rubric version of the solutions.
 
 For an example of each custom class, please see: 
@@ -39,7 +41,7 @@ Only display the directions content in the assignment document
 
 :::
 
-:::{.solution}
+:::{.sol}
 
 Only display the answer in the solution or rubric documents
 

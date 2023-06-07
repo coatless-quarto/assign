@@ -1,0 +1,8 @@
+title: Assign
+author: James J Balamuta
+version: 0.0.1
+quarto-required: ">=1.4.0"
+contributes:
+  filters:
+    - assign.lua
+
