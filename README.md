@@ -25,15 +25,15 @@ The extension takes a single document and creates three different outputs:
 - `*-sol.qmd`: Solutions without any directions.
 - `*-rubric.qmd` (Optional): Solutions alongside of grading criteria
 
-To achieve this feat, the extension uses custom class names and hides content depending on the profile being displayed.
+To achieve this feat, the extension uses custom class names and hides content depending on the profile being displayed. We current recognize the following custom class names:
 
-- `direction`: shown in the assignment, but not the solution or rubric documents.
-- `sol`: shown in the solution and rubric documents.
-- `rubric`: shown only in the rubric version of the solutions.
+- `.direction`: shown in the assignment, but not the solution or rubric documents.
+- `.sol`: shown in the solution and rubric documents.
+- `.rubric`: shown only in the rubric version of the solutions.
 
 For an example of each custom class, please see: 
 
-````
+````markdown
 
 :::{.direction}
 
@@ -52,7 +52,6 @@ Only display the answer in the solution or rubric documents
 Only display the grading notes in the rubric document.
 
 :::
-
 
 ````
 
