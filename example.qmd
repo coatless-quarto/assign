@@ -1,6 +1,8 @@
 ---
 title: "Conditional custom AST demo classes"
 format: html
+filters:
+- assign
 ---
 
 
