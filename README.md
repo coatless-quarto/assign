@@ -1,6 +1,8 @@
-**This is a work in progress extension. We're working on a few output related details!**
+> [!NOTE]
+>
+> We're working on getting a processed `.qmd` file placed into the output directory.
 
-# Assign Extension For Quarto
+# `assign`: Authoring Homework Assignments and Solutions
 
 Quarto extension for designing homework assignments and solutions in a single document.
 
@@ -25,7 +27,7 @@ The extension takes a single document and creates three different outputs:
 - `solution/`: Solutions without any directions.
 - `rubric/` (Optional): Solutions alongside of grading criteria
 
-To achieve this feat, the extension uses custom class names and hides content depending on the [Quarto profile]() being displayed. We current recognize the following custom class names:
+To achieve this feat, the extension uses custom class names and hides content depending on the [Quarto profile](https://quarto.org/docs/projects/profiles.html) being displayed. We current recognize the following custom class names:
 
 - `.direction`: shown in the assignment, but not the solution or rubric documents.
 - `.sol`: shown in the solution and rubric documents.
@@ -34,6 +36,8 @@ To achieve this feat, the extension uses custom class names and hides content de
 In a Quarto document, this would look like:
 
 ````markdown
+
+This text will appear across all versions of the document
 
 :::{.direction}
 
@@ -47,13 +51,21 @@ Only display the answer in the solution or rubric documents
 
 :::
 
+
 :::{.rubric}
 
 Only display the grading notes in the rubric document.
 
 :::
 
+
 ````
+
+> [!IMPORTANT]
+>
+> When authoring documents, there is no need to use all custom classes
+> or profiles. At any time you can omit using a class or profile if it 
+> is not required by your usage scenario.
 
 
 ## Example 

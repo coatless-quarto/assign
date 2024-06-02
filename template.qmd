@@ -5,7 +5,7 @@ filters:
   - assign
 ---
 
-## Conditional Content
+Please attempt all exercises to the best of your ability.
 
 :::{.direction}
 1. Create a vector of containing 5 different integer numbers.  

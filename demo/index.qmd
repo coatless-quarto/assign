@@ -12,6 +12,8 @@ This document is using the **`{r} Sys.getenv("QUARTO_PROFILE")`** Quarto profile
 
 ## Conditional Content
 
+Please attempt all exercises to the best of your ability.
+
 :::{.direction}
 1. Create a vector of containing 5 different integer numbers.  
 :::
@@ -36,6 +38,8 @@ y <- c(1L, -4L, -5L, 42L, 55L)
 Below is the markdown used to create the above **Conditional Content** section in the document.
 
 ````md
+Please attempt all exercises to the best of your ability.
+
 :::{.direction}
 1. Create a vector of containing 5 different integer numbers.  
 :::
