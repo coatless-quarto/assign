@@ -1,0 +1,25 @@
+---
+title: "Home"
+format: 
+  html:
+    toc: false
+---
+
+The `assign` extension allows you to create a single document that contains assignment directions, solutions, and rubric information while different output documents can omit and retain this information. 
+
+## Installing
+
+You can install the extension by typing into Terminal: 
+
+```bash
+quarto add coatless-quarto/assign
+```
+
+This will install the extension under the `_extensions` subdirectory.
+If you're using version control, you will want to check in this directory.
+
+## Background
+
+We're able to change what is displayed in the final document by using Quarto's [Conditional Content Lua API](https://quarto.org/docs/authoring/conditional.html) and [Project Profiles](https://quarto.org/docs/projects/profiles.html) features. We're opting to move in this direction instead of working further on the [{assignr}](https://github.com/r-assist/assignr) R package for RMarkdown as it would allow for language agnostic approach and various modernizations. 
+
+

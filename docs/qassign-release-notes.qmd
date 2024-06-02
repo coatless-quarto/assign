@@ -1,0 +1,40 @@
+---
+title: "Release Notes"
+date: "06-07-2023"
+date-modified: last-modified
+engine: markdown
+format: 
+  html:
+    toc: true
+---
+
+# 0.0.0-dev.1: ???? (??-??-????)
+
+## Features
+
+- `assign` allows for various Div to be set to display or be hidden based on the underlying Quarto Profile.
+  - `.direction`: shown in the assignment, but not the solution or rubric documents.
+  - `.sol`: shown in the solution and rubric documents.
+  - `.rubric`: shown only in the rubric version of the solutions.
+
+````md
+:::{.direction}
+Create a vector of containing 5 different integer numbers.  
+:::
+
+:::{.rubric}
+Correct:
+- +1 for full points
+- +0.5 for vector with 5 observations or vector with only integers but not exactly 5 observations.
+:::
+
+
+:::{.sol}
+```{r}
+x <- c(1L:5L)
+# Or: 
+y <- c(1L, -4L, -5L, 42L, 55L)
+```
+:::
+
+````
