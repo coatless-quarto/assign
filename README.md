@@ -34,9 +34,9 @@ To achieve this feat, the extension uses custom class names and hides content de
 
 ## Example 
 
-For an example of each custom class, please see the [demo/](demo/) folder.
+For an example of each custom class, please see the [template.qmd](template.qmd) file for a demo assignment.
 
-This folder contains `index.qmd` that contains the following:
+
 
 ````markdown
 

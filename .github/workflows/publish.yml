@@ -73,14 +73,14 @@ jobs:
         run: |        
           mkdir -p staging/demo/{solution,assign,rubric} && \
           cp -rp docs/_site/* staging/
-          
+
           # Define an array of directories
           dirs=("solution" "assign" "rubric")
 
           # Loop through the directories to copy files and rename the template
           for dir in "${dirs[@]}"; do
-            cp -rp ${dir}/* staging/demo/${dir}/
-            mv staging/demo/${dir}/template.html staging/demo/${dir}/index.html
+            cp -rp demo/${dir}/* staging/demo/${dir}/
+            #mv staging/demo/${dir}/template.html staging/demo/${dir}/index.html
           done
 
       # Remove symlinks

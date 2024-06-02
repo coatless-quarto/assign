@@ -1,0 +1,57 @@
+---
+title: Example {quarto-assign} document
+format: html
+filters:
+  - assign
+---
+
+## Active Profile 
+
+This document is using the **`{r} Sys.getenv("QUARTO_PROFILE")`** Quarto profile to generate output.
+
+
+## Conditional Content
+
+:::{.direction}
+1. Create a vector of containing 5 different integer numbers.  
+:::
+
+:::{.rubric}
+Points awarded:
+
+- +1 for full points
+- +0.5 for vector with 5 observations or vector with only integers but not exactly 5 observations.
+:::
+
+:::{.sol}
+```{r}
+x <- c(1L:5L)
+# Or: 
+y <- c(1L, -4L, -5L, 42L, 55L)
+```
+:::
+
+## Document Source
+
+Below is the markdown used to create the above **Conditional Content** section in the document.
+
+````md
+:::{.direction}
+1. Create a vector of containing 5 different integer numbers.  
+:::
+
+:::{.rubric}
+Points awarded:
+
+- +1 for full points
+- +0.5 for vector with 5 observations or vector with only integers but not exactly 5 observations.
+:::
+
+:::{.sol}
+```{r}
+x <- c(1L:5L)
+# Or: 
+y <- c(1L, -4L, -5L, 42L, 55L)
+```
+:::
+````
