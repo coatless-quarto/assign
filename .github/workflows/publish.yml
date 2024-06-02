@@ -46,24 +46,25 @@ jobs:
         with:
           path: "docs"
 
+      # Generate the template file under different profiles
       - name: Render assign-template 
         uses: quarto-dev/quarto-actions/render@v2
         with:
-          path: "demo/index.qmd"
+          path: "template.qmd"
         env:
           QUARTO_PROFILE: assign
 
       - name: Render solution-template 
         uses: quarto-dev/quarto-actions/render@v2
         with:
-          path: "demo/index.qmd"
+          path: "template.qmd"
         env:
           QUARTO_PROFILE: solution
 
-      - name: Render solution-template 
+      - name: Render rubric-template 
         uses: quarto-dev/quarto-actions/render@v2
         with:
-          path: "demo/index.qmd"
+          path: "template.qmd"
         env:
           QUARTO_PROFILE: rubric
 
@@ -71,10 +72,16 @@ jobs:
       - name: Copy documentation portal & examples into the staging directory
         run: |        
           mkdir -p staging/demo/{solution,assign,rubric} && \
-          cp -rp docs/_site/* staging/ && \
-          cp -rp demo/solution/* staging/demo/solution && \
-          cp -rp demo/assign/* staging/demo/assign && \
-          cp -rp demo/rubric/* staging/demo/rubric
+          cp -rp docs/_site/* staging/
+          
+          # Define an array of directories
+          dirs=("solution" "assign" "rubric")
+
+          # Loop through the directories to copy files and rename the template
+          for dir in "${dirs[@]}"; do
+            cp -rp ${dir}/* staging/demo/${dir}/
+            mv staging/demo/${dir}/template.html staging/demo/${dir}/index.html
+          done
 
       # Remove symlinks
       - name: Delete symlinks
