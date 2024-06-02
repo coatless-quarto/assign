@@ -19,15 +19,15 @@ format:
 
 ````md
 :::{.direction}
-Create a vector of containing 5 different integer numbers.  
+1. Create a vector of containing 5 different integer numbers.  
 :::
 
 :::{.rubric}
-Correct:
+Points awarded:
+
 - +1 for full points
 - +0.5 for vector with 5 observations or vector with only integers but not exactly 5 observations.
 :::
-
 
 :::{.sol}
 ```{r}
