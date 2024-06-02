@@ -24,7 +24,7 @@ function Div(div)
   }
 
   -- Add additional condition related to a project profile.
-  if div.classes:includes("sol") and quarto.project.profile == "rubric" then 
+  if div.classes:includes("sol") and quarto.project.profile:includes("rubric") then 
     table.insert(condition, {"when-profile", "rubric"})
   end
 
