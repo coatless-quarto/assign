@@ -70,9 +70,11 @@ jobs:
       # Collect the output into the staging/ directory
       - name: Copy documentation portal & examples into the staging directory
         run: |        
-          mkdir -p staging/demo && \
+          mkdir -p staging/demo/{solution,assign,rubric} && \
           cp -rp docs/_site/* staging/ && \
-          cp -rp demo/{solution,assign,rubric}/* staging/demo
+          cp -rp demo/solution/* staging/demo/solution && \
+          cp -rp demo/assign/* staging/demo/assign && \
+          cp -rp demo/rubric/* staging/demo/rubric
 
       # Remove symlinks
       - name: Delete symlinks
