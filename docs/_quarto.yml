@@ -15,6 +15,14 @@ website:
     contents: 
       - text: "Home"
         file: index.qmd
+      - section: "Demo"
+        contents:
+        - text: Assign Document
+          href: https://quarto.thecoatlessprofessor.com/assign/demo/assign
+        - text: Solution Document
+          href: https://quarto.thecoatlessprofessor.com/assign/demo/solution
+        - text: Rubric Document
+          href: https://quarto.thecoatlessprofessor.com/assign/demo/rubric
       - section: "Support"
         contents:
         - text: "Submit an issue"
