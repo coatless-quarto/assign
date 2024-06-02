@@ -10,11 +10,11 @@ function Div(div)
 
   local value_condition = {}
   if div.classes:includes("sol") then 
-    value_condition = {"when-profile", "sol"}
+    value_condition = {"when-profile", "solution"}
   elseif div.classes:includes("rubric") then 
     value_condition = {"when-profile", "rubric"}
   elseif div.classes:includes("direction") then 
-    value_condition = {"when-profile", "direction"}
+    value_condition = {"when-profile", "assign"}
   end 
 
   local condition = {
