@@ -8,6 +8,7 @@ function Div(div)
 
   local behavior = "content-visible" -- or "content-hidden", as necessary
 
+  -- Directly translate shortcode class to the full profile
   local value_condition = {}
   if div.classes:includes("sol") then 
     value_condition = {"when-profile", "solution"}
@@ -17,11 +18,17 @@ function Div(div)
     value_condition = {"when-profile", "assign"}
   end 
 
+  -- Register the condition
   local condition = {
     value_condition
-    -- other conditions
   }
 
+  -- Add additional condition related to a project profile.
+  if div.classes:includes("sol") and quarto.project.profile == "rubric" then 
+    table.insert(condition, {"when-profile", "rubric"})
+  end
+
+  -- Return the modified ConditionalBlock
   return quarto.ConditionalBlock({
     node = div, -- this is the div containing your content
     behavior = behavior,
