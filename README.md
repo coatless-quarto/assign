@@ -8,10 +8,10 @@ This is the modernization of the [`assignr`](https://github.com/r-assist/assignr
 
 ## Installing
 
-You can install the extension by typing into *Terminal*: 
+You can install the extension and receive a preset project by typing into *Terminal*: 
 
 ```bash
-quarto add coatless-quarto/assign
+quarto use template coatless-quarto/assign
 ```
 
 This will install the extension under the `_extensions` subdirectory.
@@ -21,17 +21,22 @@ If you're using version control, you will want to check in this directory.
 
 The extension takes a single document and creates three different outputs:
 
-- `*-assign.qmd`: Student facing assignment details.
-- `*-sol.qmd`: Solutions without any directions.
-- `*-rubric.qmd` (Optional): Solutions alongside of grading criteria
+- `assign/`: Student facing assignment details.
+- `solution/`: Solutions without any directions.
+- `rubric/` (Optional): Solutions alongside of grading criteria
 
-To achieve this feat, the extension uses custom class names and hides content depending on the profile being displayed. We current recognize the following custom class names:
+To achieve this feat, the extension uses custom class names and hides content depending on the [Quarto profile]() being displayed. We current recognize the following custom class names:
 
 - `.direction`: shown in the assignment, but not the solution or rubric documents.
 - `.sol`: shown in the solution and rubric documents.
 - `.rubric`: shown only in the rubric version of the solutions.
 
-For an example of each custom class, please see: 
+
+## Example 
+
+For an example of each custom class, please see the [demo/](demo/) folder.
+
+This folder contains `index.qmd` that contains the following:
 
 ````markdown
 
@@ -55,7 +60,37 @@ Only display the grading notes in the rubric document.
 
 ````
 
-## Example
+You can render documents under the desired profile by typing into Terminal:
 
-Here is the source code for a minimal example: [example.qmd](example.qmd).
+```sh
+quarto render --profile assign
+quarto render --profile solution
+quarto render --profile rubric
+```
 
+> [!NOTE]
+> 
+> We've inquiried about allowing for project profile options to be selected under the [Render button in RStudio](https://github.com/rstudio/rstudio/issues/13679), but our issue went unanswered and was marked as stale.
+> 
+
+Please note, you must have the necessary Quarto project profile present to correctly receive output in the relevant directories, e.g.
+
+`_quarto-assign.yml`
+```sh
+project:
+  output-dir: assign
+
+```
+
+`_quarto-solution.yml`
+```sh
+project:
+  output-dir: solution
+
+```
+`_quarto-rubric.yml`
+```sh
+project:
+  output-dir: rubric
+
+```
