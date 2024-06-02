@@ -31,12 +31,7 @@ To achieve this feat, the extension uses custom class names and hides content de
 - `.sol`: shown in the solution and rubric documents.
 - `.rubric`: shown only in the rubric version of the solutions.
 
-
-## Example 
-
-For an example of each custom class, please see the [template.qmd](template.qmd) file for a demo assignment.
-
-
+In a Quarto document, this would look like:
 
 ````markdown
 
@@ -60,6 +55,11 @@ Only display the grading notes in the rubric document.
 
 ````
 
+
+## Example 
+
+For an example of each custom class, please see the [template.qmd](template.qmd) file for a demo assignment.
+
 You can render documents under the desired profile by typing into Terminal:
 
 ```sh
@@ -71,7 +71,7 @@ quarto render --profile rubric
 > [!NOTE]
 > 
 > We've inquiried about allowing for project profile options to be selected under the [Render button in RStudio](https://github.com/rstudio/rstudio/issues/13679), but our issue went unanswered and was marked as stale.
-> 
+> We've just filed a request for Quarto's [VS Code extension](https://github.com/quarto-dev/quarto/issues/459).
 
 Please note, you must have the necessary Quarto project profile present to correctly receive output in the relevant directories, e.g.
 
@@ -88,9 +88,17 @@ project:
   output-dir: solution
 
 ```
+
 `_quarto-rubric.yml`
 ```sh
 project:
   output-dir: rubric
 
+```
+
+You can specify a default profile like `assign` to run by adding into the main `_quarto.yml`:
+
+```sh
+project:
+  default: assign
 ```
