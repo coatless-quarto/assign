@@ -37,9 +37,50 @@ jobs:
       # Back to our regularly scheduled Quarto output
       - name: "Set up Quarto"
         uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: "Render and Publish"
-        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          target: gh-pages
-          path: docs
+          version: "pre-release"
+
+      # Generate the documentation website
+      - name: Render Documentation website
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          path: "docs"
+
+      - name: Render assign-template 
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          path: "demo/qassign-demo-document.qmd"
+        env:
+          QUARTO_PROFILE: assign
+
+      - name: Render solution-template 
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          path: "demo/qassign-demo-document.qmd"
+        env:
+          QUARTO_PROFILE: solution
+
+      - name: Render solution-template 
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          path: "demo/qassign-demo-document.qmd"
+        env:
+          QUARTO_PROFILE: rubric
+
+      # Collect the output into the staging/ directory
+      - name: Copy documentation portal & examples into the staging directory
+        run: |        
+          mkdir -p staging/demo && \
+          cp -rp docs/_site/* staging/ && \
+          cp -rp demo/{solution,assign,rubric}/* staging/demo
+
+      # Remove symlinks
+      - name: Delete symlinks
+        run: |
+          rm -rf staging/*/_extensions
+
+      # Publish the docs directory onto gh-pages
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: staging # The folder the action should deploy.
