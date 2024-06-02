@@ -8,10 +8,10 @@ This is the modernization of the [`assignr`](https://github.com/r-assist/assignr
 
 ## Installing
 
-You can install the extension by using: 
+You can install the extension by typing into *Terminal*: 
 
 ```bash
-quarto add coatless/quarto-assign
+quarto add coatless-quarto/assign
 ```
 
 This will install the extension under the `_extensions` subdirectory.
