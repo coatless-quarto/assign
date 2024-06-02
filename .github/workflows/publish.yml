@@ -50,21 +50,21 @@ jobs:
       - name: Render assign-template 
         uses: quarto-dev/quarto-actions/render@v2
         with:
-          path: "template.qmd"
+          path: "demo/index.qmd"
         env:
           QUARTO_PROFILE: assign
 
       - name: Render solution-template 
         uses: quarto-dev/quarto-actions/render@v2
         with:
-          path: "template.qmd"
+          path: "demo/index.qmd"
         env:
           QUARTO_PROFILE: solution
 
       - name: Render rubric-template 
         uses: quarto-dev/quarto-actions/render@v2
         with:
-          path: "template.qmd"
+          path: "demo/index.qmd"
         env:
           QUARTO_PROFILE: rubric
 
