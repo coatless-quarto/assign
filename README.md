@@ -111,6 +111,6 @@ project:
 You can specify a default profile like `assign` to run by adding into the main `_quarto.yml`:
 
 ```sh
-project:
+profile:
   default: assign
 ```
