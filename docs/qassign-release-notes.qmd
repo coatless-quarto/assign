@@ -8,7 +8,7 @@ format:
     toc: true
 ---
 
-# 0.0.0-dev.1: ???? (??-??-????)
+# 0.0.0-dev.2: ???? (??-??-????)
 
 ## Features
 
@@ -38,3 +38,7 @@ y <- c(1L, -4L, -5L, 42L, 55L)
 :::
 
 ````
+
+## Changes
+
+- Added italicized `*Solution.*` inside of Div's with `.sol` ([#3](https://github.com/coatless-quarto/assign/issues/3), thanks [@d-morrison](https://github.com/d-morrison))
