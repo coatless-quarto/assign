@@ -1,27 +1,5 @@
 [
   {
-    "objectID": "qassign-release-notes.html",
-    "href": "qassign-release-notes.html",
-    "title": "Release Notes",
-    "section": "",
-    "text": "assign allows for various Div to be set to display or be hidden based on the underlying Quarto Profile.\n\n.direction: shown in the assignment, but not the solution or rubric documents.\n.sol: shown in the solution and rubric documents.\n.rubric: shown only in the rubric version of the solutions.\n\n\n:::{.direction}\n1. Create a vector of containing 5 different integer numbers.  \n:::\n\n:::{.rubric}\nPoints awarded:\n\n- +1 for full points\n- +0.5 for vector with 5 observations or vector with only integers but not exactly 5 observations.\n:::\n\n:::{.sol}\n```{r}\nx &lt;- c(1L:5L)\n# Or: \ny &lt;- c(1L, -4L, -5L, 42L, 55L)\n```\n:::",
-    "crumbs": [
-      "Extra",
-      "Release Notes"
-    ]
-  },
-  {
-    "objectID": "qassign-release-notes.html#features",
-    "href": "qassign-release-notes.html#features",
-    "title": "Release Notes",
-    "section": "",
-    "text": "assign allows for various Div to be set to display or be hidden based on the underlying Quarto Profile.\n\n.direction: shown in the assignment, but not the solution or rubric documents.\n.sol: shown in the solution and rubric documents.\n.rubric: shown only in the rubric version of the solutions.\n\n\n:::{.direction}\n1. Create a vector of containing 5 different integer numbers.  \n:::\n\n:::{.rubric}\nPoints awarded:\n\n- +1 for full points\n- +0.5 for vector with 5 observations or vector with only integers but not exactly 5 observations.\n:::\n\n:::{.sol}\n```{r}\nx &lt;- c(1L:5L)\n# Or: \ny &lt;- c(1L, -4L, -5L, 42L, 55L)\n```\n:::",
-    "crumbs": [
-      "Extra",
-      "Release Notes"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
@@ -49,6 +27,28 @@
     "text": "Background\nWe’re able to change what is displayed in the final document by using Quarto’s Conditional Content Lua API and Project Profiles features. We’re opting to move in this direction instead of working further on the {assignr} R package for RMarkdown as it would allow for language agnostic approach and various modernizations.",
     "crumbs": [
       "Home"
+    ]
+  },
+  {
+    "objectID": "qassign-release-notes.html",
+    "href": "qassign-release-notes.html",
+    "title": "Release Notes",
+    "section": "",
+    "text": "assign allows for various Div to be set to display or be hidden based on the underlying Quarto Profile.\n\n.direction: shown in the assignment, but not the solution or rubric documents.\n.sol: shown in the solution and rubric documents.\n.rubric: shown only in the rubric version of the solutions.\n\n\n:::{.direction}\n1. Create a vector of containing 5 different integer numbers.  \n:::\n\n:::{.rubric}\nPoints awarded:\n\n- +1 for full points\n- +0.5 for vector with 5 observations or vector with only integers but not exactly 5 observations.\n:::\n\n:::{.sol}\n```{r}\nx &lt;- c(1L:5L)\n# Or: \ny &lt;- c(1L, -4L, -5L, 42L, 55L)\n```\n:::",
+    "crumbs": [
+      "Extra",
+      "Release Notes"
+    ]
+  },
+  {
+    "objectID": "qassign-release-notes.html#features",
+    "href": "qassign-release-notes.html#features",
+    "title": "Release Notes",
+    "section": "",
+    "text": "assign allows for various Div to be set to display or be hidden based on the underlying Quarto Profile.\n\n.direction: shown in the assignment, but not the solution or rubric documents.\n.sol: shown in the solution and rubric documents.\n.rubric: shown only in the rubric version of the solutions.\n\n\n:::{.direction}\n1. Create a vector of containing 5 different integer numbers.  \n:::\n\n:::{.rubric}\nPoints awarded:\n\n- +1 for full points\n- +0.5 for vector with 5 observations or vector with only integers but not exactly 5 observations.\n:::\n\n:::{.sol}\n```{r}\nx &lt;- c(1L:5L)\n# Or: \ny &lt;- c(1L, -4L, -5L, 42L, 55L)\n```\n:::",
+    "crumbs": [
+      "Extra",
+      "Release Notes"
     ]
   }
 ]
