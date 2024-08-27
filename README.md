@@ -19,6 +19,15 @@ quarto use template coatless-quarto/assign
 This will install the extension under the `_extensions` subdirectory.
 If you're using version control, you will want to check in this directory.
 
+To activate the extension, add the `assign` filter to the assignment's `.qmd` file header
+or to the filter list for the quarto project (e.g. in `_quarto.yml`):
+
+```yaml
+title: "Assignment 1"
+filters:
+  - assign
+```
+
 ## Using
 
 The extension takes a single document and creates three different outputs:
@@ -111,6 +120,6 @@ project:
 You can specify a default profile like `assign` to run by adding into the main `_quarto.yml`:
 
 ```sh
-project:
+profile:
   default: assign
 ```
