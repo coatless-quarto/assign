@@ -30,6 +30,8 @@ website:
       - section: "Extra"
         contents:
         - qassign-release-notes.qmd
+        - href: https://blog.thecoatlessprofessor.com/projects/assign/
+          text: Blog posts
 
 format: 
   html:
