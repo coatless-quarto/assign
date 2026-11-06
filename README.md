@@ -124,6 +124,12 @@ profile:
   default: assign
 ```
 
+## Learn more
+
+- [Documentation](https://quarto.thecoatlessprofessor.com/assign/)
+- [Release notes](https://quarto.thecoatlessprofessor.com/assign/qassign-release-notes.html)
+- [Blog posts](https://blog.thecoatlessprofessor.com/projects/assign/)
+
 ## License
 
 assign is licensed under AGPL-3.0-or-later with an exception: what you write and render with assign stays yours, along with the output, under any terms you like. See [LICENSE](LICENSE) and [LICENSE-EXCEPTION.md](LICENSE-EXCEPTION.md).
