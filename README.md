@@ -123,3 +123,7 @@ You can specify a default profile like `assign` to run by adding into the main `
 profile:
   default: assign
 ```
+
+## License
+
+assign is licensed under AGPL-3.0-or-later with an exception: what you write and render with assign stays yours, along with the output, under any terms you like. See [LICENSE](LICENSE) and [LICENSE-EXCEPTION.md](LICENSE-EXCEPTION.md).
